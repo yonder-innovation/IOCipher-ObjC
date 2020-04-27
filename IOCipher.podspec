@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
   s.subspec 'common' do |ss|
     ss.source_files = 'IOCipher/*.{h,m}'
     ss.xcconfig = { 'OTHER_CFLAGS' => '$(inherited) -DHAVE_LIBSQLCIPHER -DSQLITE_HAS_CODEC' }
-    ss.dependency 'https://github.com/ChatSecure/libsqlfs.git', branch: '1.3.2-chatsecure'
+    ss.dependency 'https://github.com/yonder-innovation/libsqlfs.git'
     ss.dependency 'CocoaLumberjack'
   end
 
