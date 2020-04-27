@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.homepage         = "https://github.com/chrisballinger/IOCipher"
   s.license          = 'LGPLv2.1+'
   s.author           = { "Chris Ballinger" => "chris@chatsecure.org" }
-  s.source           = { :git => "https://github.com/chrisballinger/IOCipher.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/yonder-innovation/libsqlfs.git"}
   s.social_media_url = 'https://twitter.com/ChatSecure'
 
   s.ios.deployment_target = '9.0'
@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
   s.subspec 'common' do |ss|
     ss.source_files = 'IOCipher/*.{h,m}'
     ss.xcconfig = { 'OTHER_CFLAGS' => '$(inherited) -DHAVE_LIBSQLCIPHER -DSQLITE_HAS_CODEC' }
-    ss.dependency 'https://github.com/yonder-innovation/libsqlfs.git'
+    ss.dependency 'libsqlfs/SQLCipher'
     ss.dependency 'CocoaLumberjack'
   end
 
